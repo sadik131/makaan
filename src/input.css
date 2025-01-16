@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .primary-border{
-  @apply border border-primary border-dotted
+  @apply border border-primary border-dashed
 }
 
 .swiper-button-prev i,

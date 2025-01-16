@@ -11,7 +11,8 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
   <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -25,7 +26,7 @@
       <h1 class="text-[40px] font-inter font-bold text-primary">Makaan</h1>
     </div>
     <!-- links -->
-    <ul class="flex justify-between text-[15px] text-accent items-center font-hebbo">
+    <ul class="hidden lg:flex justify-between text-[15px] text-accent items-center font-hebbo">
       <li class="ml-[30px]">HOME</li>
       <li class="ml-[30px]">ABOUT</li>
       <li class="ml-[30px] relative">PROPERTY
@@ -48,12 +49,14 @@
   </nav>
 
   <!-- hero section -->
-  <section class="flex items-center">
+  <section class="flex  flex-col-reverse lg:flex-row items-center">
     <!-- left -->
-    <div class="w-1/2 p-12">
-      <h1 class="text-5xl mb-6 font-inter text-accent font-extrabold">Find A <span class="text-primary">Perfect
+    <div class="lg:w-1/2 p-12">
+      <h1 class="text-[33px] lg:text-5xl mb-6 font-inter text-accent font-extrabold">Find A <span
+          class="text-primary">Perfect
           Home</span> To Live With Your Family</h1>
-      <p class="text-base text-text mb-6">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum
+      <p class="text-base font-hebbo pb-2 text-text mb-6">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam
+        no. Kasd rebum
         ipsum et diam justo clita et kasd rebum sea elitr.</p>
       <button class="py-4 px-12 bg-primary rounded-md font-hebbo text-base text-white">Get Started</button>
     </div>
@@ -89,15 +92,15 @@
 
 
   <!-- Search -->
-  <section class="bg-primary p-[35px] mb-[35px]">
-    <div class="container max-w-[1140px] mx-auto text-text flex font-hebbo">
+  <section class="bg-primary p-[35px] mb-[48px]">
+    <div class="container max-w-[1140px] mx-auto text-text flex flex-col lg:flex-row font-hebbo">
       <!-- 1st input -->
-      <div class="px-1 w-1/3">
+      <div class="px-1 mt-2 lg:w-1/3">
         <input type="text" class="w-full rounded-md px-3 py-4 placeholder:text-text focus:outline-none"
           placeholder="Search Keyword">
       </div>
       <!-- 2nd input -->
-      <div class="relative px-1 w-1/3">
+      <div class="relative px-1 mt-2 lg:w-1/3">
         <select class="appearance-none w-full rounded-md px-3 py-4 focus:outline-none">
           <option value="">Property</option>
           <option value="1">Property 1</option>
@@ -107,7 +110,7 @@
         <i class="fa-solid fa-angle-down absolute top-1/2 right-4 transform -translate-y-1/2"></i>
       </div>
 
-      <div class="relative px-1 w-1/3">
+      <div class="relative px-1 mt-2 lg:w-1/3">
         <select class="appearance-none w-full rounded-md px-3 py-4 focus:outline-none">
           <option value="">Location</option>
           <option value="">Location 1</option>
@@ -116,22 +119,22 @@
         </select>
         <i class="fa-solid fa-angle-down absolute top-1/2 right-4 transform -translate-y-1/2"></i>
       </div>
-      <button class="bg-accent text-white py-4 px-3 w-1/6 rounded-md">Search</button>
+      <button class="bg-accent text-white py-4 px-3 mt-2 lg:px-1 lg:w-1/6 rounded-md">Search</button>
     </div>
   </section>
 
   <!-- Property type -->
   <section class="max-w-[1140px] mx-auto container py-12">
     <!-- heding -->
-    <div class="text-center max-w-[600px] mx-auto mb-12">
-      <h1 class="text-[40px] font-bold mb-4 font-inter text-accent"> Property Types</h1>
+    <div class="heding__text text-center max-w-[600px] mx-auto mb-12 px-3 lg:px-0">
+      <h1 class="text-[30px] lg:text-[40px] font-bold mb-4 font-inter text-accent"> Property Types</h1>
       <p class="mb-4 font-hebbo text-base text-text">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
         dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
     </div>
     <!-- cards -->
-    <div class="flex flex-wrap">
+    <div class="card__animation flex flex-wrap">
       <!-- card 1 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -145,7 +148,7 @@
         </div>
       </div>
       <!-- card 2 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -159,7 +162,7 @@
         </div>
       </div>
       <!-- card 3 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -173,7 +176,7 @@
         </div>
       </div>
       <!-- card 4 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -187,7 +190,7 @@
         </div>
       </div>
       <!-- card 5 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -201,7 +204,7 @@
         </div>
       </div>
       <!-- card 6 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -215,7 +218,7 @@
         </div>
       </div>
       <!-- card 7 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -229,7 +232,7 @@
         </div>
       </div>
       <!-- card 8 -->
-      <div class="w-1/4 px-3">
+      <div class="lg:w-1/4 w-full px-3">
         <div class="rounded-md group transition-all duration-300 bg-[#EFFDF5] mt-6">
           <div class="p-4">
             <div class="primary-border group-hover:bg-primary bg-white rounded-md p-6 flex flex-col items-center">
@@ -247,20 +250,22 @@
 
   <!-- find Property -->
   <section class="max-w-[1140px] mx-auto container py-12">
-    <div class="flex items-center">
+    <div class="flex flex-col lg:flex-row">
       <!-- left side -->
-      <div class="w-1/2 px-6">
+      <div class="lg:w-1/2 px-6">
         <img src="img/about.jpg" class="w-full h-full object-cover" alt="">
       </div>
       <!-- right side -->
-      <div class="w-1/2 px-6">
-        <h1 class="text-accent text-[40px] font-bold font-inter mb-6">#1 Place To Find The Perfect Property</h1>
+      <div class="lg:w-1/2 px-6 pt-12">
+        <h1 class="text-accent text-[30px] lg:text-[40px] font-bold font-inter mb-6 leading-[1.2]">#1 Place To Find The
+          Perfect
+          Property</h1>
         <p class="text-text mb-6 font-hebbo">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
           amet diam et
           eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
 
         <!-- check -->
-        <ul class="text-text">
+        <ul class="text-text font-hebbo">
           <!-- 1st -->
           <li class="mb-4 flex items-center text-base">
             <i class="fa-solid fa-check text-primary mr-4"></i>
@@ -276,7 +281,7 @@
             <i class="fa-solid fa-check text-primary mr-4"></i>
             <p>Clita duo justo magna dolore erat amet</p>
           </li>
-          <button class="mt-4 bg-primary px-12 py-4 rounded-md text-white">Read More</button>
+          <button class="mt-4 bg-primary font-hebbo px-12 py-4 rounded-md text-white">Read More</button>
         </ul>
       </div>
     </div>
@@ -285,191 +290,517 @@
   <!-- list Property -->
   <section class="max-w-[1140px] mx-auto container py-12">
     <!-- top section -->
-    <div class="flex justify-between">
+    <div class="flex flex-col lg:flex-row justify-between">
       <!-- left side -->
-      <div class="w-1/2 px-6">
-        <h1 class="text-[40px] mb-4 text-accent font-inter font-bold">Property Listing</h1>
+      <div class="lg:w-1/2 px-6 mb-12">
+        <h1 class="text-[30px] lg:text-[40px] mb-4 text-accent font-inter font-bold">Property Listing</h1>
         <p class="text-base mb-4 lg:mb-0 text-text font-hebbo">Eirmod sed ipsum dolor sit rebum labore magna erat.
           Tempor ut dolore lorem kasd vero ipsum sit eirmod sit
           diam justo sed rebum.</p>
       </div>
       <!-- right side -->
-      <div class="w-1/2 px-6 flex items-end justify-end">
-        <button
+      <div class="lg:w-1/2 px-6">
+        <ul class="mb-12 flex lg:items-end lg:justify-end">
+          <li>
+            <button
           class="text-white border mr-2 border-primary text-base bg-primary rounded-md py-[6px] px-3">Feature</button>
-        <button
-          class="text-text mr-2 hover:bg-primary hover:text-white text-base border py-[6px] px-3 border-primary rounded-md">For
-          Sell</button>
-        <button
-          class="text-text mr-2 hover:bg-primary hover:text-white text-base border py-[6px] px-3 border-primary rounded-md">For
-          Rent</button>
+          </li>
+          <li>
+            <button
+              class="text-text mr-2 hover:bg-primary hover:text-white text-base border py-[6px] px-3 border-primary rounded-md">For
+              Sell</button>
+          </li>
+          <li> 
+            <button
+              class="text-text mr-2 hover:bg-primary hover:text-white text-base border py-[6px] px-3 border-primary rounded-md">For
+              Rent</button>
+            </li>
+        </ul>
       </div>
     </div>
 
     <!-- list of cards -->
-    <div class="flex flex-wrap"> 
+    <div class="card__animation flex flex-wrap">
       <!-- card 1 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-1.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-1.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
           </div>
         </div>
       </div>
       <!-- card 2 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-2.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-2.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
           </div>
         </div>
       </div>
       <!-- card 3 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-3.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-3.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
           </div>
         </div>
       </div>
       <!-- card 4 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-4.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-4.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
           </div>
         </div>
       </div>
       <!-- card 5 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-5.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-5.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
           </div>
         </div>
       </div>
       <!-- card 6 -->
-      <div class="px-3 mt-6 w-1/3">
+      <div class="px-3 mt-6 w-full lg:w-1/3">
         <div class="shadow-lg rounded-md">
           <!-- card head -->
-          <div class="w-full rounded-t-md relative">
-            <img src="img/property-6.jpg" class="w-full" alt="">
+          <div class="w-full relative">
+            <img src="img/property-6.jpg" class="rounded-t-md w-full" alt="">
             <span class="absolute top-0 m-6 py-1 px-4 font-hebbo bg-primary text-white rounded-md">For Sell</span>
-            <span class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
+            <span
+              class="absolute bottom-0 mx-6 py-1 px-4 font-hebbo text-primary bg-white rounded-t-md">Appartment</span>
           </div>
           <!-- card body -->
           <div class="px-6 pt-6 font-inter">
             <h4 class="text-primary text-xl mb-4 font-bold">$12,345</h4>
             <h4 class="text-accent text-xl mb-2 font-bold">Golden Urban House For Sell</h4>
-            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York, USA</p>
+            <p class="text-text"><i class="fa-solid fa-location-dot text-primary mr-2 mb-4"></i> 123 Street, New York,
+              USA</p>
           </div>
           <!-- card footer -->
           <div class="flex text-sm border-t border-[#00b98e4d] border-dotted text-text">
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-ruler-combined text-primary mr-2"></i>100 Sqft</span>
-            <span class="w-1/3 flex items-center justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2 border-r border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bed text-primary mr-2"></i>3 bed</span>
-            <span class="w-1/3 flex items-center justify-center py-2  border-[#00b98e4d] border-dotted"><i
+            <span class="w-1/3 flex items-center font-hebbo justify-center py-2  border-[#00b98e4d] border-dotted"><i
                 class="fa-solid fa-bath text-primary mr-2"></i>2 bath</span>
+          </div>
+        </div>
+      </div>
+      <button class="animation__bottom bg-primary text-white rounded-md block mx-auto mt-6 py-4 px-12 font-hebbo">Browes More
+        Property</button>
+    </div>
+  </section>
+
+  <!-- contect us -->
+  <section class="max-w-[1140px] mx-auto container py-12">
+    <!-- contect card -->
+    <div class="container mx-auto">
+      <div class="bg-[#EFFDF5] p-6 rounded-md">
+        <div class="bg-white py-6 border border-[#00b98e4d] border-dashed flex flex-col lg:flex-row rounded-md justify-center">
+          <!-- right -->
+          <div class="lg:w-1/2 px-6">
+            <img src="img/call-to-action.jpg" class="rounded-md object-cover" alt="">
+          </div>
+          <!-- left -->
+          <div class="lg:w-1/2 px-6 mt-12">
+            <h1 class="text-[30px] lg:text-[40px] text-accent font-inter mb-4 font-bold leading-[1.2]">Contact With Our Certified Agent
+            </h1>
+            <p class="text-base mb-6 font-hebbo text-text">Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem
+              kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
+            <button class="bg-primary font-hebbo text-white py-4 px-6 mr-2 rounded-md"><i class="fa-solid fa-phone"></i>
+              Make A call</button>
+            <button class="bg-accent font-hebbo text-white py-4 px-6 mr-2 rounded-md"><i
+                class="fa-solid fa-calendar-days"></i> Get Appoinment</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Agents  -->
+  <section class="max-w-[1140px] mx-auto container py-12">
+    <!-- heding -->
+    <div class="heding__text text-center max-w-[600px] px-3 mx-auto mb-12">
+      <h1 class="text-[30px] lg:text-[40px] font-bold mb-4 font-inter text-accent">Property Agents</h1>
+      <p class="mb-4 font-hebbo text-base text-text">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+        dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+    </div>
+
+    <!-- our members -->
+    <div class="card__animation flex flex-col lg:flex-row flex-wrap">
+      <!-- member 1 -->
+      <div class="lg:w-1/4 px-3 mt-6">
+        <div class="shadow-lg rounded-md">
+          <!-- img -->
+          <div class="relative">
+            <img class="rounded-t-md" src="img/team-1.jpg" alt="">
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex">
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- body -->
+          <div class="text-center mt-4 p-6">
+            <h3 class="text-xl text-accent font-inter font-bold">Full Name</h3>
+            <h3 class="text-base text-text font-hebbo">Designation</h3>
+          </div>
+        </div>
+
+      </div>
+      <!-- member 2 -->
+      <div class="lg:w-1/4 px-3 mt-6">
+        <div class="shadow-lg rounded-md">
+          <!-- img -->
+          <div class="relative">
+            <img class="rounded-t-md" src="img/team-2.jpg" alt="">
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex">
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- body -->
+          <div class="text-center mt-4 p-6">
+            <h3 class="text-xl text-accent font-inter font-bold">Full Name</h3>
+            <h3 class="text-base text-text font-hebbo">Designation</h3>
+          </div>
+        </div>
+
+      </div>
+      <!-- member 3 -->
+      <div class="lg:w-1/4 px-3 mt-6">
+        <div class="shadow-lg rounded-md">
+          <!-- img -->
+          <div class="relative">
+            <img class="rounded-t-md" src="img/team-3.jpg" alt="">
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex">
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- body -->
+          <div class="text-center mt-4 p-6">
+            <h3 class="text-xl text-accent font-inter font-bold">Full Name</h3>
+            <h3 class="text-base text-text font-hebbo">Designation</h3>
+          </div>
+        </div>
+
+      </div>
+      <!-- member 4 -->
+      <div class="lg:w-1/4 px-3 mt-6">
+        <div class="shadow-lg rounded-md">
+          <!-- img -->
+          <div class="relative">
+            <img class="rounded-t-md" src="img/team-4.jpg" alt="">
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 flex">
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a href="*"
+                class="bg-white hover:bg-primary hover:text-white text-primary flex items-center justify-center mx-1 w-9 h-9 shadow-sm rounded-full"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- body -->
+          <div class="text-center mt-4 p-6">
+            <h3 class="text-xl text-accent font-inter font-bold">Full Name</h3>
+            <h3 class="text-base text-text font-hebbo">Designation</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="max-w-[1140px] mx-auto container py-12">
+    <!-- Heading -->
+    <div class="heding__text text-center max-w-[600px] mx-auto px-3 mb-12">
+      <h1 class="text-[30px] lg:text-[40px] font-bold mb-4 font-inter text-accent">Our Clients Say!</h1>
+      <p class="mb-4 font-hebbo text-base text-text">
+        Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
+        diam justo sed rebum vero dolor duo.
+      </p>
+    </div>
+
+    <div class="card__animation testimonials-swiper relative overflow-hidden">
+      <div class="swiper-wrapper">
+        <!-- Testimonial Slide 1 -->
+        <div class="swiper-slide bg-[#effdf5] shadow-lg p-4 rounded-md ">
+          <div class="bg-white rounded-md border border-[#00b98e4d] p-6 border-dashed">
+            <p class="text-base text-text font-hebbo mb-4">Tempor stet labore dolor clita stet diam amet ipsum dolor duo
+              ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+            <div class="flex">
+              <img src="img/testimonial-1.jpg" class="h-[45px] w-[45px] rounded-md" alt="">
+              <div class="ml-4">
+                <h4 class="text-accent mb-1 text-base font-bold font-inter">Client Name</h4>
+                <h5 class="text-text font-hebbo text-sm">Profession</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Slide 2 -->
+        <div class="swiper-slide bg-[#effdf5] shadow-lg p-4 rounded-md ">
+          <div class="bg-white rounded-md border border-[#00b98e4d] p-6 border-dashed">
+            <p class="text-base text-text font-hebbo mb-4">Tempor stet labore dolor clita stet diam amet ipsum dolor duo
+              ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+            <div class="flex">
+              <img src="img/testimonial-2.jpg" class="h-[45px] w-[45px] rounded-md" alt="">
+              <div class="ml-4">
+                <h4 class="text-accent mb-1 text-base font-bold font-inter">Client Name</h4>
+                <h5 class="text-text font-hebbo text-sm">Profession</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial Slide 3 -->
+        <div class="swiper-slide bg-[#effdf5] shadow-lg p-4 rounded-md ">
+          <div class="bg-white rounded-md border border-[#00b98e4d] p-6 border-dashed">
+            <p class="text-base text-text font-hebbo mb-4">Tempor stet labore dolor clita stet diam amet ipsum dolor duo
+              ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+            <div class="flex">
+              <img src="img/testimonial-3.jpg" class="h-[45px] w-[45px] rounded-md" alt="">
+              <div class="ml-4">
+                <h4 class="text-accent mb-1 text-base font-bold font-inter">Client Name</h4>
+                <h5 class="text-text font-hebbo text-sm">Profession</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next text-gray-700"></div>
+      <div class="swiper-button-prev text-gray-700"></div>
+    </div>
+
+  </section>
+
+  <!-- footer -->
+  <footer class="bg-accent text-white pt-12 mt-12">
+    <div class="container max-w-[1140px] mx-auto ">
+      <div class="flex flex-col md:flex-row">
+        <div class="mt-12 lg:w-1/4 px-6">
+          <h3 class="text-xl font-bold font-inter mb-6 text-white">Get In Touch</h3>
+          <ul class="text-[#FFFFFF80] font-hebbo">
+            <li class="mb-2"><i class="mr-4 fas fa-map-marker-alt"></i> 123 Street, New York, USA</li>
+            <li class="mb-2"><i class="mr-4 fas fa-phone"></i> +012 345 67890</li>
+            <li class="mb-2"><i class="mr-4 fas fa-envelope"></i> info@example.com</li>
+          </ul>
+          <div class="pt-2 flex">
+            <a href="" class="h-[35px] w-[35px] border border-[#EFFDF5] rounded-full flex items-center justify-center">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href=""
+              class="h-[35px] w-[35px] border border-[#EFFDF5] ml-[5px] rounded-full flex items-center justify-center">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href=""
+              class="h-[35px] w-[35px] border border-[#EFFDF5] ml-[5px] rounded-full flex items-center justify-center">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href=""
+              class="h-[35px] w-[35px] border border-[#EFFDF5] ml-[5px] rounded-full flex items-center justify-center">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 lg:w-1/4 px-6">
+          <h3 class="text-xl font-bold font-inter mb-6 text-white">Quick Links</h3>
+          <ul class="text-[#FFFFFF80] font-hebbo">
+            <li class="mb-[5px]"><a href="#">About Us</a></li>
+            <li class="mb-[5px]"><a href="#">Contact Us</a></li>
+            <li class="mb-[5px]"><a href="#">Our Services</a></li>
+            <li class="mb-[5px]"><a href="#">Privacy Policy</a></li>
+            <li class="mb-[5px]"><a href="#">Terms & Condition</a></li>
+          </ul>
+        </div>
+
+        <div class="mt-12 w-full lg:w-1/4 px-6">
+          <h3 class="text-xl font-bold font-inter mb-6 text-white">Photo Gallery</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-1.jpg" alt="Image 1" class="rounded-md">
+            </div>
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-2.jpg" alt="Image 2" class="rounded-md">
+            </div>
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-3.jpg" alt="Image 3" class="rounded-md">
+            </div>
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-4.jpg" alt="Image 4" class="rounded-md">
+            </div>
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-5.jpg" alt="Image 5" class="rounded-md">
+            </div>
+            <div class="bg-[#EFFDF5] p-1 rounded-md">
+              <img src="img/property-6.jpg" alt="Image 6" class="rounded-md">
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 lg:w-1/4 px-6">
+          <h3 class="text-xl font-bold font-inter mb-6 text-white">Newsletter</h3>
+          <p class="text-base font-hebbo text-[#FFFFFF80]">Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+          <div class="mt-4 flex relative">
+            <input type="email" placeholder="Your email"
+              class="focus:outline-none border px-6 rounded-md bg-transparent py-4 border-[#ffffff80] w-full lg:max-w-[400px]">
+            <button class="bg-primary text-white rounded-md px-3 py-2 absolute right-0 mt-2 mr-3">Signup</button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 border-t text-[#ffffff80] border-[#ffffff1a] font-hebbo py-[25px] flex flex-col lg:flex-row justify-between">
+        <p class="px-3 text-[15px] lg:mb-0 mb-4">&copy; <span
+            class="text-white relative after:content-[''] after:block after:w-full after:h-[1px] after:bg-[#effdf5] after:absolute after:left-0 after:bottom-0">Your
+            Site Name</span>, All Rights Reserved. Designed By <span
+            class="text-white relative after:content-[''] after:block after:w-full after:h-[1px] after:bg-[#effdf5] after:absolute after:left-0 after:bottom-0">HTML
+            Codex</span></p>
+        <ul class="px-3 flex justify-center text-white font-hebbo">
+          <li class="mr-[15px] pr-[15px] border-r border-[#ffffff1a]">Home</li>
+          <li class="mr-[15px] pr-[15px] border-r border-[#ffffff1a]">Cookies</li>
+          <li class="mr-[15px] pr-[15px] border-r border-[#ffffff1a]">Help</li>
+          <li class="mr-[15px] pr-[15px]">FAQs</li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
 
   <!-- swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <!-- scrollreveal -->
+  <script src="js/scrollreveal.min.js"></script>
 
 
   <!-- icon -->

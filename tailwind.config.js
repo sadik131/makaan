@@ -7,12 +7,15 @@ module.exports = {
       inter: ["Inter", "serif"],
     },
     extend: {
+      lineHeight: {
+        "leading": "1.2",
+      },
       borderRadius: {
         md:"5px"
       },
       container: {
         center: true,
-        padding: '0px',
+        padding: '12px',
         screens: {
           'lg': '1366px',
         },
