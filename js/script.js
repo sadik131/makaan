@@ -16,8 +16,11 @@ document.querySelectorAll("#mobile-nav-links > li").forEach((item) => {
       nestedLinks.classList.toggle("hidden");
 
       // Rotate icon
-      icon.classList.add("rotate-180");
-      console.log(icon)
+      if (nestedLinks.classList.contains("hidden")) {
+        icon.classList.remove("rotate-180");
+      } else {
+        icon.classList.add("rotate-180");
+      }
     }
   });
 });
