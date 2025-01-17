@@ -687,6 +687,10 @@ video {
   margin-right: 1rem;
 }
 
+.mr-\[10px\] {
+  margin-right: 10px;
+}
+
 .mr-\[15px\] {
   margin-right: 15px;
 }
@@ -1189,22 +1193,6 @@ video {
   /* Change button background on hover */
 }
 
-@media (min-width: 1024px) {
-  .lg\:container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-
-  @media (min-width: 1366px) {
-    .lg\:container {
-      max-width: 1366px;
-    }
-  }
-}
-
 .placeholder\:text-text::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(102 101 101 / var(--tw-text-opacity, 1));
@@ -1328,14 +1316,14 @@ video {
     justify-content: flex-end;
   }
 
-  .lg\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .lg\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
 
   .lg\:text-5xl {
