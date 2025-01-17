@@ -7,6 +7,9 @@ module.exports = {
       inter: ["Inter", "serif"],
     },
     extend: {
+      boxShadow: {
+        custom: '0 0 30px rgba(0, 0, 0, 0.08)',
+      },
       lineHeight: {
         "leading": "1.2",
       },

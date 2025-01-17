@@ -17,36 +17,75 @@
 
 <body>
   <!-- navbar -->
-  <nav class="container mx-auto max-w-[1140px] bg-white flex justify-between items-center">
-    <!-- logo -->
-    <div class="flex items-center">
-      <div class="border mr-2 p-2 border-dashed border-primary rounded-full">
-        <img class="h-[30px] w-[30px]" src="img/logo.png" alt="">
+  <nav class="fixed top-0 mx-auto w-full z-50">
+    <div class="container flex justify-between items-center lg:w-[93%] lg:mt-11 h-[75px] shadow-custom bg-white transition-transform transform">
+      <!-- logo -->
+      <div class="flex items-center">
+        <div class="border mr-2 p-2 border-dashed border-primary rounded-full">
+          <img class="h-[30px] w-[30px]" src="img/logo.png" alt="">
+        </div>
+        <h1 class="lg:text-[40px] text-[30px] font-inter font-bold text-primary">Makaan</h1>
       </div>
-      <h1 class="text-[40px] font-inter font-bold text-primary">Makaan</h1>
+      <!-- Hamburger Button -->
+      <button id="hamburger" class="lg:hidden border py-1 px-4 rounded-md border-[#0000001a] text-[#0000008c] text-2xl" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <!-- desktop links -->
+      <ul id="nav-links"
+        class="hidden lg:flex justify-between text-[15px] font-medium text-accent items-center font-hebbo">
+        <li class="ml-[30px] cursor-pointer py-[25px]">HOME</li>
+        <li class="ml-[30px] cursor-pointer py-[25px]">ABOUT</li>
+        <li class="ml-[30px] group cursor-pointer py-[25px] relative">PROPERTY
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="absolute hidden bg-white group-hover:block top-[72px] w-40 border py-2 whitespace-nowrap">
+            <li class="py-1 hover:bg-slate-100 cursor-pointer px-4">PROPERTY LIST</li>
+            <li class="py-1 hover:bg-slate-100 cursor-pointer px-4">PROPERTY TYPE</li>
+            <li class="py-1 hover:bg-slate-100 cursor-pointer px-4">PROPERTY AGENT</li>
+          </ul>
+        </li>
+        <li class="ml-[30px] py-[25px] cursor-pointer group bg-white relative">PAGES
+          <i class="fa-solid fa-angle-down"></i>
+          <ul class="absolute hidden bg-white group-hover:block top-[72px] w-40 border py-2 whitespace-nowrap">
+            <li class="py-1 hover:bg-slate-100 cursor-pointer px-4">Testimonial</li>
+            <li class="py-1 hover:bg-slate-100 cursor-pointer px-4">404 Error</li>
+          </ul>
+        </li>
+        <li class="ml-[30px] cursor-pointer">CONTACT</li>
+        <button class="px-4 ml-[30px] bg-primary text-white rounded-md py-[6px] px">
+          Add Property
+        </button>
+      </ul>
     </div>
-    <!-- links -->
-    <ul class="hidden lg:flex justify-between text-[15px] text-accent items-center font-hebbo">
-      <li class="ml-[30px]">HOME</li>
-      <li class="ml-[30px]">ABOUT</li>
-      <li class="ml-[30px] relative">PROPERTY
-        <ul class="absolute bg-slate-50 hidden w-40">
-          <li class="py-1 px-4">PROPERTY LIST</li>
-          <li class="py-1 px-4">PROPERTY TYPE</li>
-          <li class="py-1 px-4">PROPERTY AGENT</li>
-        </ul>
-
-      </li>
-      <li class="ml-[30px] relative">PAGES
-        <ul class="absolute hidden">
-          <li>Testimonial</li>
-          <li>404 Error</li>
+    <!-- Mobile links -->
+    <ul id="mobile-nav-links" class="lg:hidden hidden flex-col items-start bg-white font-hebbo shadow-md py-4 px-6 w-full">
+      <li class="py-2 cursor-pointer w-full">HOME</li>
+      <li class="py-2 cursor-pointer w-full">ABOUT</li>
+      <li class="py-2 cursor-pointer w-full relative group">
+        <div class="flex items-center w-full" id="property-toggle">
+          <span>PROPERTY</span>
+          <i class="fa-solid fa-angle-down ml-[5px] transition-transform transform"></i>
+        </div>
+        <ul class="hidden border border-[#00000026] py-2 mt-2 space-y-1">
+          <li class="py-1 pl-4 cursor-pointer hover:bg-slate-100">PROPERTY LIST</li>
+          <li class="py-1 pl-4 cursor-pointer hover:bg-slate-100">PROPERTY TYPE</li>
+          <li class="py-1 pl-4 cursor-pointer hover:bg-slate-100">PROPERTY AGENT</li>
         </ul>
       </li>
-      <li class="ml-[30px]">CONTACT</li>
-      <button class="px-4 ml-[30px] bg-primary text-white rounded-md py-[6px] px">Add Property</button>
+      <li class="py-2 cursor-pointer w-full relative group">
+        <div class="flex items-center w-full">
+          <span>PAGES</span>
+          <i class="fa-solid fa-angle-down ml-[5px] transition-transform transform" id="pages-icon"></i>
+        </div>
+        <ul class="hidden border border-[#00000026] py-2 mt-2 space-y-1">
+          <li class="py-1 pl-4 cursor-pointer hover:bg-slate-100">Testimonial</li>
+          <li class="py-1 pl-4 cursor-pointer hover:bg-slate-100">404 Error</li>
+        </ul>
+      </li>
+      <li class="py-2 cursor-pointer w-full">CONTACT</li>
     </ul>
+
   </nav>
+
 
   <!-- hero section -->
   <section class="flex  flex-col-reverse lg:flex-row items-center">
@@ -252,9 +291,11 @@
   <section class="max-w-[1140px] mx-auto container py-12">
     <div class="flex flex-col lg:flex-row">
       <!-- left side -->
-      <div class="lg:w-1/2 px-6">
-        <img src="img/about.jpg" class="w-full h-full object-cover" alt="">
+      <div
+        class="relative lg:w-1/2 p-12 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-primary before:skew-x-[20deg] before:h-full before:w-full before:-left-1/2 before:-z-10">
+        <img src="img/about.jpg" class="w-full h-full object-cover" alt="About">
       </div>
+
       <!-- right side -->
       <div class="lg:w-1/2 px-6 pt-12">
         <h1 class="text-accent text-[30px] lg:text-[40px] font-bold font-inter mb-6 leading-[1.2]">#1 Place To Find The
@@ -658,8 +699,8 @@
       </p>
     </div>
 
-    <div class="card__animation testimonials-swiper relative overflow-hidden">
-      <div class="swiper-wrapper">
+    <div class="card__animation px-16 testimonials-swiper relative">
+      <div class="swiper-wrapper ">
         <!-- Testimonial Slide 1 -->
         <div class="swiper-slide bg-[#effdf5] shadow-lg p-4 rounded-md ">
           <div class="bg-white rounded-md border border-[#00b98e4d] p-6 border-dashed">
@@ -706,8 +747,8 @@
       </div>
 
       <!-- Navigation Buttons -->
-      <div class="swiper-button-next text-gray-700"></div>
-      <div class="swiper-button-prev text-gray-700"></div>
+      <div class="swiper-button-next-test text-white bg-primary"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="swiper-button-prev-test text-white bg-primary"><i class="fa-solid fa-arrow-left"></i></div>
     </div>
 
   </section>

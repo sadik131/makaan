@@ -1,3 +1,42 @@
+// Toggle the entire mobile menu
+document.getElementById("hamburger").addEventListener("click", () => {
+  const mobileNav = document.getElementById("mobile-nav-links");
+  mobileNav.classList.toggle("hidden");
+});
+
+// Toggle nested links and rotate icons
+document.querySelectorAll("#mobile-nav-links > li").forEach((item) => {
+  const icon = item.querySelector("i"); // Find the icon
+  const nestedLinks = item.querySelector("ul"); // Find the nested links
+
+  item.addEventListener("click", (event) => {
+    // Check if the clicked target is not part of the nested links
+    if (event.target.closest("ul")) {
+      // Toggle visibility of nested links
+      nestedLinks.classList.toggle("hidden");
+
+      // Rotate icon
+      icon.classList.add("rotate-180");
+      console.log(icon)
+    }
+  });
+});
+
+window.addEventListener("scroll", () => {
+  const navContainer = document.querySelector("nav > .container");
+
+  if (window.scrollY > 44) {
+    navContainer.classList.remove("lg:w-[93%]", "lg:mt-11");
+    navContainer.classList.add("lg:w-full"); // Add full width on scroll
+  } else {
+    navContainer.classList.remove("lg:w-full");
+    navContainer.classList.add("lg:w-[93%]", "lg:mt-11"); // Revert back to original styles
+  }
+});
+
+
+
+
 const swiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
@@ -17,22 +56,17 @@ const swiper = new Swiper('.swiper-container', {
 
 // Initialize Swiper
 const testimonialsSwiper = new Swiper('.testimonials-swiper', {
-  slidesPerView: 1, // Default for small screens
-  spaceBetween: 20, // Spacing between slides
-  loop: true, // Enables infinite looping
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
   breakpoints: {
     640: { slidesPerView: 1 },
     768: { slidesPerView: 2 },
-    1024: { slidesPerView: 2 },
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next-test',
+    prevEl: '.swiper-button-prev-test',
   },
-  // autoplay: {
-  //   delay: 3000, // 3 seconds delay between slides
-  //   disableOnInteraction: false, // Continue autoplay after user interaction
-  // },
 });
 
 // scroll releav
